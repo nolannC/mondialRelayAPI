@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Days+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/signup.css">
+    <link rel="stylesheet" href="./css/footer.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo"><img src="./img/logo.png" alt="Logo mondial relay"></div>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a id="profile" href="profile.html">Profile</a></li>
+                <li><a id="signup" href="signup.html">Sign up</a></li>
+                <li><a id="signin" href="signin.html">Sign in</a></li>
+                <li><a id="logout" href="#">Log out</a></li> <!-- Uniquement si déco -->
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <p id="errorServer" hidden></p>
+        <h1>SIGN UP</h1>
+        <form autocomplete="off">
+
+            <select name="civility" required>
+                <option>MR</option>
+                <option>M.</option>
+                <option>MME</option>
+                <option>MLE</option>
+                <option>MLLE</option>
+            </select>
+            <input type="text" placeholder="First Name" name="fName" required minlength="2" />
+            <input type="text" placeholder="Last Name" name="lName" required minlength="2" />
+
+            <input type="text" placeholder="Localisation" name="localisation" required minlength="2" maxlength="32" />
+            <input type="text" placeholder="City" name="city" required minlength="2" maxlength="32" />
+            <input type="number" placeholder="Postal Code" name="postalCode" required minlength="5" maxlength="5" />
+            <input type="text" placeholder="Country" name="country" required minlength="2" maxlength="2" />
+
+            <input type="email" placeholder="Email" name="email" required />
+            <p id="errorEmail" hidden></p>
+            <input type="tel" placeholder="Phone Number" name="phoneNumber" required />
+
+            <input type="password" placeholder="Password" name="password" required minlength="8" />
+
+            <button type="submit">Sign up</button>
+        </form>
+    </main>
+    <footer>
+        <div class="divContact">
+            <h3>Contact us</h3>
+            <ul>
+                <li><a href="https://github.com/nolannC">Nolann</a></li>
+                <li><a href="https://github.com/Mathieu-URA">Mathieu</a></li>
+                <li><a href="https://github.com/morganeHi">Morgane</a></li>
+                <li><a href="https://github.com/Bllrt-cindy">Cindy</a></li>
+            </ul>
+        </div>
+        <div class="copyright">
+            <p>Copyright &copy</p>
+        </div>
+        <div></div>
+    </footer>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./js/signup.js"></script>
+    <script src="./js/header.js"></script>
+</body>
+
+</html>

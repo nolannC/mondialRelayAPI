@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Days+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/signin.css">
+    <link rel="stylesheet" href="./css/footer.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo"><img src="./img/logo.png" alt="Logo mondial relay"></div>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a id="profile" href="profile.html">Profile</a></li>
+                <li><a id="signup" href="signup.html">Sign up</a></li>
+                <li><a id="signin" href="signin.html">Sign in</a></li>
+                <li><a id="logout" href="#">Log out</a></li> <!-- Uniquement si déco -->
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <p id="errorServer" hidden></p>
+        <h1>LOG IN</h1>
+        <form autocomplete="off">
+            <input type="email" placeholder="Email" name="email" required />
+            <p id="errorEmail" class="error" hidden></p>
+            <input type="password" placeholder="Password" name="password" required />
+            <p id="errorPassword" class="error" hidden></p>
+            <button type="submit">Sign in</button>
+        </form>
+        <p id="noAccount">You don't have an account ?</p>
+        <button class="signUp"> <a href="signup.html"> Sign up</a></button>
+    </main>
+    <footer>
+        <div class="divContact">
+            <h3>Contact us</h3>
+            <ul>
+                <li><a href="https://github.com/nolannC">Nolann</a></li>
+                <li><a href="https://github.com/Mathieu-URA">Mathieu</a></li>
+                <li><a href="https://github.com/morganeHi">Morgane</a></li>
+                <li><a href="https://github.com/Bllrt-cindy">Cindy</a></li>
+            </ul>
+        </div>
+        <div class="copyright">
+            <p>Copyright &copy</p>
+        </div>
+        <div></div>
+    </footer>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./js/signin.js"></script>
+    <script src="./js/header.js"></script>
+</body>
+
+</html>

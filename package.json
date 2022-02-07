@@ -1,0 +1,19 @@
+{
+  "name": "mondialrelayapiv2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run back\" \"npm run front\"",
+    "dev": "concurrently \"npm run backdev\" \"npm run front\"",
+    "back": "cd back && npm start",
+    "backdev": "cd back && npm run dev",
+    "front": "cd front && npm start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^7.0.0"
+  }
+}

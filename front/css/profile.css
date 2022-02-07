@@ -1,0 +1,97 @@
+main {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+main div {
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.bigContainer {
+	padding: 1rem;
+	border-radius: 5px;
+	width: 30rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	background-color: rgba(255, 255, 255, 1);
+	margin: 1.5rem;
+}
+
+.bigContainer div {
+	margin: 5px;
+	display: flex;
+	justify-content: space-between;
+}
+
+input,
+select {
+	margin: 5px;
+	width: 15rem;
+	padding: 5px;
+	/* padding: 5px 10px 5px; */
+	border-radius: 5px;
+	border: 1px solid #d3d6d3;
+	/* font-size: 0.8rem; */
+	background-color: white;
+}
+
+button {
+	color: white;
+	margin: 2rem 0;
+	background-color: #3388cc;
+	padding: 10px 20px;
+	border-radius: 25px;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 4px;
+	font-size: 1.5rem;
+	border: none;
+	font-family: 'Days One', sans-serif;
+}
+button:hover {
+	background-color: white;
+	color: #3388cc;
+	cursor: pointer;
+}
+#map {
+	height: 29.5rem;
+	width: 90%;
+	border-radius: 5px;
+}
+
+.articleMap {
+	padding-left: 1rem;
+	width: 70vw;
+	z-index: 2;
+	padding-bottom: 4rem;
+}
+
+.leaflet-popup-tip-container {
+	visibility: hidden;
+}
+
+#stickers {
+	height: 34.5rem;
+	padding: 0 !important;
+}
+
+#stickers #ulDiv {
+	overflow-y: auto;
+	overflow-x: hidden;
+	margin-left: 1rem;
+	width: 13rem;
+	height: 300px;
+	margin-bottom: 3.5rem;
+}
+
+#stickers button {
+	margin: 0.5rem !important;
+	font-size: 1rem !important;
+	width: 11rem;
+}

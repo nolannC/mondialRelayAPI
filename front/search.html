@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relay Point Search</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Days+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/search.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+</head>
+
+<body>
+    <header id="header">
+        <nav>
+            <div class="logo"><img src="./img/logo.png" alt="Logo mondial relay"></div>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a id="profile" href="profile.html">Profile</a></li>
+                <li><a id="signup" href="signup.html">Sign up</a></li>
+                <li><a id="signin" href="signin.html">Sign in</a></li>
+                <li><a id="logout" href="#">Log out</a></li> <!-- Uniquement si déco -->
+            </ul>
+        </nav>
+    </header>
+    <div id="anchor">
+        <a href="#header"><img src="./img/arrow.png" alt="Arrow"></a>
+    </div>
+    <main>
+        <section class="searchSection">
+            <h1>FIND YOUR RELAY POINT</h1>
+            <form id="searchPointRelais" autocomplete="off">
+                <input type="text" name="country" placeholder="Country" minlength="2" maxlength="2" required />
+                <input type="text" name="city" placeholder="City" required />
+                <input type="text" name="postalCode" placeholder="Postal Code" minlength="5" maxlength="5" required />
+                <input type="number" name="results" placeholder="Nb of results" min="1" max="39" required />
+                <button type="submit">Search</button>
+            </form>
+        </section>
+        <section class="resultSection">
+            <article class="articleMap">
+                <div id="map"></div>
+            </article>
+
+            <article id="results"></article>
+        </section>
+    </main>
+    <footer>
+        <div class="divContact">
+            <h3>Contact us</h3>
+            <ul>
+                <li><a href="https://github.com/nolannC">Nolann</a></li>
+                <li><a href="https://github.com/Mathieu-URA">Mathieu</a></li>
+                <li><a href="https://github.com/morganeHi">Morgane</a></li>
+                <li><a href="https://github.com/Bllrt-cindy">Cindy</a></li>
+            </ul>
+        </div>
+        <div class="copyright">
+            <p>Copyright &copy</p>
+        </div>
+        <div></div>
+    </footer>
+    <script src="https://kit.fontawesome.com/a3e447c4f9.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./js/search.js"></script>
+    <script src="./js/header.js"></script>
+</body>
+
+</html>

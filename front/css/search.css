@@ -1,0 +1,120 @@
+p {
+	line-height: 1.2rem;
+}
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+span {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	padding: 0 0.2rem;
+	color: gray;
+}
+
+.searchSection {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-top: 2rem;
+	width: 100%;
+}
+form {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+input,
+button {
+	width: 8rem;
+	margin: 0.5rem;
+	padding: 5px 10px 5px;
+	border-radius: 5px;
+	border: 1px solid #d3d6d3;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+button {
+	color: white;
+	background-color: #3388cc;
+}
+button:hover {
+	background-color: #d3d6d3;
+	color: inherit;
+	cursor: pointer;
+}
+.resultSection {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin-top: 2rem;
+}
+#map {
+	height: 70vh;
+	border-radius: 5px;
+}
+.articleMap {
+	padding-left: 1rem;
+	width: 70vw;
+	z-index: 2;
+	padding-bottom: 4rem;
+}
+/* Articles container */
+#results {
+	display: none;
+	flex-direction: column;
+	width: 25vw;
+	height: 70vh;
+	overflow-y: scroll;
+	background-color: rgba(255, 255, 255, 1);
+}
+.contenerRelay {
+	border: 1px solid #d3d6d3;
+	padding: 5px 0 5px 0;
+	margin: 0 1rem 1rem 1rem;
+	border-radius: 5px;
+}
+
+/*############################################### MEDIA QUERIES ######################################*/
+/*############################################### MEDIA QUERIES ######################################*/
+@media screen and (max-width: 1156px) {
+	.articleMap {
+		padding: 0;
+		width: 60vw;
+	}
+	#results {
+		width: 35vw;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.resultSection {
+		flex-direction: column;
+	}
+	.articleMap {
+		margin: auto;
+		width: 95%;
+		padding: 0;
+	}
+	#results {
+		width: 90vw;
+		margin: 0 2vw;
+		margin-top: 1rem;
+	}
+	.contenerRelay,
+	#results {
+		padding: 0;
+	}
+	.contenerRelay {
+		width: 100%;
+		margin: 1rem 0;
+	}
+	footer {
+		bottom: 0;
+	}
+}

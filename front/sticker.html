@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Days+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/stickers.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/footer.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo"><img src="./img/logo.png" alt="Logo mondial relay"></div>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a id="profile" href="profile.html">Profile</a></li>
+                <li><a id="signup" href="signup.html">Sign up</a></li>
+                <li><a id="signin" href="signin.html">Sign in</a></li>
+                <li><a id="logout" href="#">Log out</a></li> <!-- Uniquement si déco -->
+            </ul>
+        </nav>
+    </header>
+    <div id="anchor">
+        <img src="./img/arrow.png" alt="Arrow">
+    </div>
+    <main>
+        <h1>My Package</h1>
+        <form id="createSticker" autocomplete="off">
+            <div class="row">
+                <div class="bigContainer">
+                    <div>
+                        <h2>Receiver</h2>
+                    </div>
+                    <div>
+                        <input type="text" name="CountryReceiver" placeholder="Country" minlength="2" maxlength="2"
+                            required value="FR">
+                    </div>
+                    <div>
+                        <select name="CivilityReceiverAddress1" required>
+                            <option>MR</option>
+                            <option>M.</option>
+                            <option>MME</option>
+                            <option>MLE</option>
+                            <option>MLLE</option>
+                        </select>
+                        <input type="text" name="fnameReceiverAddress1" placeholder="First Name" minlength="2" required
+                            value="Pierre">
+                        <input type="text" name="lnameReceiverAddress1" placeholder="Last Name" minlength="2" required
+                            value="Paul">
+                    </div>
+                    <div>
+                        <input type="email" name="MailReceiver2" placeholder="Email" value="pierre.paul@gmail.com">
+                        <input type="tel" name="PhoneReceiver2" placeholder="Phone" min="10" max="10"
+                            value="0605040302">
+                    </div>
+                    <div>
+                        <input type="text" name="AddressReceiver3" placeholder="Street" minlength="2" maxlength="32"
+                            required value="16 quai Emile Zola">
+                        <input type="text" name="CityReceiver" placeholder="City" minlength="2" maxlength="32" required
+                            value="Rennes">
+                        <input type="text" name="PostalCodeReceiver" placeholder="Postal Code" minlength="5"
+                            maxlength="5" value="35000" required>
+                    </div>
+                </div>
+
+                <div class="bigContainer">
+                    <div>
+                        <h2>Sender</h2>
+                    </div>
+                    <div>
+                        <input type="text" name="CountrySender" placeholder="Country" minlength="2" maxlength="2"
+                            required value="FR">
+                    </div>
+                    <div>
+                        <select name="CivilitySenderAddress1" required>
+                            <option>MR</option>
+                            <option>M.</option>
+                            <option>MME</option>
+                            <option>MLE</option>
+                            <option>MLLE</option>
+                        </select>
+                        <input type="text" name="fnameSenderAddress1" placeholder="First Name" minlength="2" required
+                            value="Prenom">
+                        <input type="text" name="lnameSenderAddress1" placeholder="Last Name" minlength="2" required
+                            value="Nom">
+                    </div>
+                    <div>
+                        <input type="email" name="MailSender" placeholder="Email" value="prenom.nom@gmail.com">
+                        <input type="tel" name="PhoneSender" placeholder="Phone" min="10" max="10" required
+                            value="0505050505">
+                    </div>
+                    <div>
+                        <input type="text" name="AddressSender3" placeholder="Street" minlength="2" maxlength="32"
+                            required value="rue">
+                        <input type="text" name="CitySender" placeholder="City" minlength="2" maxlength="32" required
+                            value="Rennes">
+                        <input type="text" name="PCSender" placeholder="Postal Code" minlength="5" maxlength="5"
+                            required value="35000">
+                    </div>
+                </div>
+                <div class="smallContainer">
+
+                    <div>
+                        <h2 class="infos">Infos</h2>
+                    </div>
+                    <div class="column">
+                        <div>
+                            <label for="CollectMode" class="colMode">Collect Mode </label>
+                            <select name="CollectMode" id="colMode" required>
+                                <option>CCC</option>
+                                <option>CDR</option>
+                                <option>CDS</option>
+                                <option>REL</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="DeliveryMode">Delivery Mode</label>
+                            <select name="DeliveryMode" id="delMode" required>
+                                <option>LCC</option>
+                                <option>LD1</option>
+                                <option>LDS</option>
+                                <option>24R</option>
+                                <option>24L</option>
+                                <option>ESP</option>
+                                <option>DRI</option>
+                            </select><br>
+                            <label for="WeightReceiver">Weight (gr)</label>
+                            <input type="number" name="WeightReceiver" placeholder="Weight(gramme)" min="15" required
+                                value="120"><br>
+                            <label for="NbPackage">Nb package</label>
+                            <input type="number" name="NbPackage" placeholder="Nb of package" min="1" max="99" value="1"
+                                required><br>
+                            <label for="Reimboursement">Reimboursement</label>
+                            <input type="number" name="Reimbursement" placeholder="Reimbursement" min="0" required
+                                value="0"><br>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="smallContainer">
+                    <div>
+                        <h2 class="infos">Details</h2>
+                    </div>
+
+                    <textarea name="Text" id="text" cols="30" rows="10" placeholder="Enter your text..."></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <button type="submit">Print</button>
+            </div>
+
+        </form>
+    </main>
+    <footer>
+        <div class="divContact">
+            <h3>Contact us</h3>
+            <ul>
+                <li><a href="https://github.com/nolannC">Nolann</a></li>
+                <li><a href="https://github.com/Mathieu-URA">Mathieu</a></li>
+                <li><a href="https://github.com/morganeHi">Morgane</a></li>
+                <li><a href="https://github.com/Bllrt-cindy">Cindy</a></li>
+            </ul>
+        </div>
+        <div class="copyright">
+            <p>Copyright &copy</p>
+        </div>
+        <div></div>
+    </footer>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./js/sticker.js"></script>
+    <script src="./js/header.js"></script>
+</body>
+
+</html>

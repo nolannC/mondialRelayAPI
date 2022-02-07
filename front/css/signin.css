@@ -1,0 +1,80 @@
+main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#errorServer {
+	font-style: italic;
+	color: red;
+	font-size: 1.5rem;
+}
+
+form {
+	display: flex;
+	padding: 2rem;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-radius: 15px;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	width: 20rem;
+	background-color: rgba(255, 255, 255, 1);
+}
+input,
+button {
+	margin: 1rem 0;
+}
+form button {
+	background-color: #3388cc;
+	border: solid 1px #3388cc;
+	color: white;
+	cursor: pointer;
+}
+form button:hover {
+	border: solid 1px #3388cc;
+	background-color: white;
+	color: #3388cc;
+}
+button {
+	padding: 10px 20px;
+	border-radius: 25px;
+	font-size: 1.2rem;
+	border: none;
+	font-family: 'Days One', sans-serif;
+}
+
+.error {
+	font-style: italic;
+	color: red;
+}
+
+.signUp {
+	border: solid 1px #3388cc;
+	color: #3388cc;
+	background-color: white;
+}
+.signUp:hover {
+	background-color: #3388cc;
+	color: white;
+}
+input {
+	width: 12rem;
+	padding: 5px 10px 5px;
+	border-radius: 5px;
+	border: 1px solid #d3d6d3;
+	font-size: 0.8rem;
+	background-color: white;
+}
+
+#noAccount {
+	margin-top: 2rem;
+	font-size: 1rem;
+	font-style: italic;
+}
+.copyright p {
+	margin: 0;
+	font-style: normal;
+	font-size: inherit;
+}

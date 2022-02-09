@@ -12,6 +12,10 @@ main div {
 	justify-content: center;
 }
 
+body[dark-mode] .mainContainer {
+	background-color: transparent !important;
+}
+
 .bigContainer {
 	padding: 1rem;
 	border-radius: 5px;
@@ -63,6 +67,15 @@ button:hover {
 	height: 29.5rem;
 	width: 90%;
 	border-radius: 5px;
+	background: transparent !important;
+}
+
+body[dark-mode] #map div:not(.leaflet-popup-content-wrapper) {
+	background: transparent !important;
+}
+
+body[dark-mode] #map .leaflet-popup-content-wrapper {
+	background: #fff !important;
 }
 
 .articleMap {

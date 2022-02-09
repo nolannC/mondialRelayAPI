@@ -112,7 +112,16 @@ router.post('/search', async (req, res) => {
 					if (timeArray.length === 0) {
 						pointRelais[key] = 'Closed';
 					} else {
-						pointRelais[key] = timeArray.map(horaire => horaire.slice(0, 2) + 'h' + horaire.slice(2, 4)).join(' - ');
+						console.log(timeArray);
+						pointRelais[key] = timeArray
+							.map(
+								horaire =>
+									(parseInt(horaire.slice(0, 2)) % 13) +
+									':' +
+									horaire.slice(2, 4) +
+									(Math.floor(parseInt(horaire.slice(0, 2)) / 12) === 0 ? 'AM' : 'PM')
+							)
+							.join(' - ');
 					}
 				}
 				if (['Num', 'Latitude', 'Longitude', 'Distance'].includes(key)) {
@@ -135,9 +144,19 @@ router.post('/search', async (req, res) => {
 				arr.push([index, value]);
 			});
 
+			const days = {
+				Lundi: 'Monday',
+				Mardi: 'Tuesday',
+				Mercredi: 'Wednesday',
+				Jeudi: 'Thursday',
+				Vendredi: 'Friday',
+				Samedi: 'Saturday',
+				Dimanche: 'Sunday'
+			};
+
 			Object.entries(horaires).forEach(kv => {
 				const pos = hUniq.indexOf(kv[1]);
-				arr[pos][0] += kv[0].slice(9);
+				arr[pos][0] += days[kv[0].slice(9)];
 			});
 
 			arr.forEach(value => {

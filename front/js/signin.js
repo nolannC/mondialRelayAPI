@@ -7,9 +7,9 @@ document.querySelector('form').addEventListener('submit', async e => {
 		body[input.name] = input.value;
 	});
 	try {
-		const { data } = await axios.post('http://localhost:3000/auth/signin', body);
+		const { data } = await axios.post('https://gentle-beyond-27069.herokuapp.com/auth/signin', body);
 		localStorage.setItem('Authorization', data);
-		window.location = 'http://localhost:1234/';
+		window.location = '/';
 	} catch (e) {
 		if (e.response.status === 404) {
 			document.getElementById('errorEmail').hidden = false;

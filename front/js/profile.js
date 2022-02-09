@@ -5,7 +5,9 @@ if (!localStorage.getItem('Authorization')) {
 //! ################################# Get informations and display
 //! ################################# Get informations and display
 (async () => {
-	const { data } = await axios('http://localhost:3000/user/me', { headers: { Authorization: 'Bearer ' + localStorage.getItem('Authorization') } });
+	const { data } = await axios('https://gentle-beyond-27069.herokuapp.com/user/me', {
+		headers: { Authorization: 'Bearer ' + localStorage.getItem('Authorization') }
+	});
 	document.querySelectorAll('option').forEach(option => {
 		if (option.value === data.civility) {
 			option.selected = true;
@@ -19,7 +21,7 @@ if (!localStorage.getItem('Authorization')) {
 
 	if (data.favoritePR) {
 		if (data.favoritePR !== 0) {
-			let { data: pointRelais } = await axios.post('http://localhost:3000/mr/search', {
+			let { data: pointRelais } = await axios.post('https://gentle-beyond-27069.herokuapp.com/mr/search', {
 				country: 'FR',
 				results: '1',
 				id: data.favoritePR.toString().padStart(6, '0')
@@ -66,7 +68,9 @@ document.getElementById('modifyButton').addEventListener('click', event => {
 		inputs.forEach(input => {
 			body[input.name] = input.value;
 		});
-		const { data } = await axios.put('http://localhost:3000/user/me', body, { headers: { Authorization: 'Bearer ' + localStorage.getItem('Authorization') } });
+		const { data } = await axios.put('https://gentle-beyond-27069.herokuapp.com/user/me', body, {
+			headers: { Authorization: 'Bearer ' + localStorage.getItem('Authorization') }
+		});
 		localStorage.setItem('Authorization', data);
 
 		window.location = '/profile.html';

@@ -39,6 +39,17 @@ button {
 	border: 1px solid #d3d6d3;
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+
+select {
+	width: 8rem;
+	margin: 0.5rem;
+	padding: 5px 10px 5px;
+	border-radius: 5px;
+	border: 1px solid #d3d6d3;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	background: #fff;
+}
+
 button {
 	color: white;
 	background-color: #3388cc;
@@ -58,6 +69,20 @@ button:hover {
 	height: 70vh;
 	border-radius: 5px;
 }
+body[dark-mode] #map {
+	z-index: 999;
+	background: transparent !important;
+}
+
+body[dark-mode] #map div {
+	z-index: 999;
+	background: transparent !important;
+}
+
+body[dark-mode] .articleMap {
+	background: transparent !important;
+}
+
 .articleMap {
 	padding-left: 1rem;
 	width: 70vw;

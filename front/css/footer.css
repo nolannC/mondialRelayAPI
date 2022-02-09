@@ -1,42 +1,48 @@
-footer{
-    display: flex;
-    z-index: 999;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    background-color: #3388cc;
-    width: 100%;
-    color: white;
-    height: 80px;
-    /* min-height: 80px; */
-    bottom: 0!important;
-    position: absolute;
-    /* bottom: 0; */
-    /* width: 100%; */
+footer {
+	display: flex;
+	z-index: 999;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	background-color: #3388cc;
+	width: 100%;
+	color: white;
+	height: 80px;
+	/* min-height: 80px; */
+	bottom: 0 !important;
+	position: absolute;
+	/* bottom: 0; */
+	/* width: 100%; */
 }
-h3{
-    padding: 0 1rem;
+h3 {
+	padding: 0 1rem;
 }
-.divContact{
-    display: flex;
-    flex-direction: row;
+.divContact {
+	display: flex;
+	flex-direction: row;
 }
-.divContact ul{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+
+body[dark-mode] .divContact,
+body[dark-mode] .copyright {
+	background-color: #3388cc !important;
 }
-.divContact ul li{
-    padding: 0 1rem;
-    padding-top: .5vh;
+
+.divContact ul {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
 }
-.copyright{
-    padding: 0 1rem;
+.divContact ul li {
+	padding: 0 1rem;
+	padding-top: 0.5vh;
 }
-.copyright p{
-    padding: 0;
-    font-size: inherit;
+.copyright {
+	padding: 0 1rem;
+}
+.copyright p {
+	padding: 0;
+	font-size: inherit;
 }
 /* @media screen and (max-width: 609) {
 

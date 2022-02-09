@@ -1,65 +1,77 @@
-main{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 #errorServer {
-    font-style: italic;
-    color: red;
-    font-size: 1.5rem;
+	font-style: italic;
+	color: red;
+	font-size: 1.5rem;
 }
 
-h1{
-    margin-top: -.5rem;
-    padding-top: 15vh;
+h1 {
+	margin-top: -0.5rem;
+	padding-top: 15vh;
 }
-form{
-    display: flex;
-    padding: 2rem 4rem 1rem 4rem;
-    flex-direction: column;
-    justify-content:space-around;
-    align-items: center;
-    border-radius: 15px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    background-color: rgba(255, 255, 255, 1);
-    margin-bottom: 2rem;
+form {
+	display: flex;
+	padding: 2rem 4rem 1rem 4rem;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	border-radius: 15px;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	background-color: rgba(255, 255, 255, 1);
+	margin-bottom: 2rem;
 }
-form button{
-    margin-top: 1rem;
-    background-color: #3388cc;
-    border: solid 1px #3388cc;
-    color: white;
-    cursor: pointer;
-    padding: 10px 20px;
-    border-radius: 25px;
-    font-size: 1.2rem;
-    font-family: 'Days One', sans-serif;
+
+body[dark-mode] form {
+	background-color: rgb(24, 24, 24);
 }
-form button:hover{
-    border: solid 1px #3388cc;
-    background-color: white;
-    color: #3388cc;
+
+body[dark-mode] input,
+body[dark-mode] select {
+	border-color: rgb(60, 65, 68);
+	background-color: #181a1b;
+	color: #e8e6e3;
 }
-input, select{
-    margin: 5px;   
-    width: 15rem;
-    padding: 5px;
-    border-radius: 5px;
-    border: 1px solid #D3D6D3;
-    font-size: .8rem;
-    background-color: white;
-    
+
+form button {
+	margin-top: 1rem;
+	background-color: #3388cc;
+	border: solid 1px #3388cc;
+	color: white;
+	cursor: pointer;
+	padding: 10px 20px;
+	border-radius: 25px;
+	font-size: 1.2rem;
+	font-family: 'Days One', sans-serif;
+}
+form button:hover {
+	border: solid 1px #3388cc;
+	background-color: white;
+	color: #3388cc;
+}
+input,
+select {
+	margin: 5px;
+	width: 15rem;
+	padding: 5px;
+	border-radius: 5px;
+	border: 1px solid #d3d6d3;
+	font-size: 0.8rem;
+	background-color: white;
 }
 
 #errorEmail {
-    font-style: italic;
-    color: red;
+	font-style: italic;
+	color: red;
 }
 
 @media screen and (max-width: 1274px) {
-    h1 {
-        padding-top: 5vh;
-    }
+	h1 {
+		padding-top: 5vh;
+	}
 }

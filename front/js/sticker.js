@@ -34,10 +34,10 @@ document.querySelector('#createSticker').addEventListener('submit', async e => {
 	body['LangReceiver'] = inputs.find(element => element.name === 'CountryReceiver').value;
 
 	try {
-		const { data: url } = await axios.post('http://localhost:3000/mr/createSticker', body);
+		const { data: url } = await axios.post('https://gentle-beyond-27069.herokuapp.com/mr/createSticker', body);
 		if (localStorage.getItem('Authorization')) {
 			const { data } = await axios.put(
-				'http://localhost:3000/user/me',
+				'https://gentle-beyond-27069.herokuapp.com/user/me',
 				{ createdSticker: url },
 				{ headers: { Authorization: 'Bearer ' + localStorage.getItem('Authorization') } }
 			);

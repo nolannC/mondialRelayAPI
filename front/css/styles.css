@@ -1,55 +1,79 @@
-*{
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-decoration: none;
-    box-sizing: border-box;
-    color: inherit;
-    scroll-behavior: smooth;
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	box-sizing: border-box;
+	color: inherit;
+	scroll-behavior: smooth;
+}
+
+body[dark-mode] {
+	color-scheme: dark !important;
 }
 
 body {
-    background: url(/img/bluelines.png);
-    min-height: 100vh;
-    position: relative;
+	background: url(/img/bluelines.png);
+	min-height: 100vh;
+	position: relative;
 }
 
-main{
-    padding-bottom: 80px;
-    /* min-height: 68px; */
+body[dark-mode] {
+	background-color: black;
 }
 
-h1, h2{
-    /*font-family: 'Playfair Display', serif;*/
-    font-family: 'Days One', sans-serif;
-    color: #3388cc;
-    text-align: center;
+main {
+	padding-bottom: 80px;
+	/* min-height: 68px; */
 }
-h1{
-    margin-top: 74px;
-    font-size: 2.5rem;
-    padding: 2rem;
+
+h1,
+h2 {
+	/*font-family: 'Playfair Display', serif;*/
+	font-family: 'Days One', sans-serif;
+	color: #3388cc;
+	text-align: center;
 }
-h2{
-    font-size: 1.2rem;
-    padding: .5rem;
+
+body[dark-mode] div,
+body[dark-mode] article {
+	background-color: rgb(24, 24, 24) !important;
 }
-h3{
-    white-space: nowrap;
-    font-family: 'Days One', sans-serif;
+
+h1 {
+	margin-top: 74px;
+	font-size: 2.5rem;
+	padding: 2rem;
 }
-p{
-    font-family: 'Raleway', sans-serif;
-    padding: .5rem;
-    font-size: .8rem;
+h2 {
+	font-size: 1.2rem;
+	padding: 0.5rem;
 }
-ul, select, input, label, option{
-    font-family: 'Raleway', sans-serif;
-    font-weight: 500;
+h3 {
+	white-space: nowrap;
+	font-family: 'Days One', sans-serif;
 }
-nav{
-    top: 0;
+p {
+	font-family: 'Raleway', sans-serif;
+	padding: 0.5rem;
+	font-size: 0.8rem;
 }
-header{
-    margin-bottom: 4rem;
+
+body[dark-mode] p {
+	color: #d8d4cf;
+}
+
+ul,
+select,
+input,
+label,
+option {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 500;
+}
+nav {
+	top: 0;
+}
+header {
+	margin-bottom: 4rem;
 }
